@@ -12,6 +12,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  background-color: rgb(9, 17, 44);
 }
 
 .container {
@@ -27,10 +28,11 @@ body {
   border-radius: 30px;
   color:#fff;
   cursor: pointer;
-  flex: 0.5;
+  flex: 0.1;
   margin: 10px;
   position: relative;
   transition: flex 0.7s ease-in;
+  
 }
 
 .panel h3 {
@@ -43,29 +45,23 @@ body {
 }
 
 .panel.active {
-  flex: 5;
+  flex: 0.4;
 }
 
 .panel.active h3 {
   opacity: 1;
+  transition: opacity 0.3s ease-in 0.7s;
 }
 
 @media screen and (min-width: 480px) {
   .container {
     width: 100vw;
   }
+  .panel:nth-of-type(14), 
+  .panel:nth-of-type(13),
+  .panel:nth-of-type(12), 
+  {
+    display: none;
+  }
 }
 
-.panel:nth-of-type(14), 
-.panel:nth-of-type(13),
-.panel:nth-of-type(12), 
-.panel:nth-of-type(11), 
-.panel:nth-of-type(10), 
-.panel:nth-of-type(9), 
-.panel:nth-of-type(8), 
-.panel:nth-of-type(7), 
-.panel:nth-of-type(6), 
-.panel:nth-of-type(5), 
-.panel:nth-of-type(4) {
-  display: none;
-}
