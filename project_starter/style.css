@@ -15,9 +15,20 @@ body {
   background-color: rgb(9, 17, 44);
 }
 
+h1 {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
 .container {
   display: flex;
   width: 90vw;
+
 }
 
 .panel {
@@ -45,7 +56,7 @@ body {
 }
 
 .panel.active {
-  flex: 0.4;
+  flex: 0.8;
 }
 
 .panel.active h3 {
@@ -56,6 +67,7 @@ body {
 @media screen and (min-width: 480px) {
   .container {
     width: 100vw;
+    
   }
   .panel:nth-of-type(14), 
   .panel:nth-of-type(13),
