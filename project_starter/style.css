@@ -1,79 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+
 }
 
 body {
-  font-family: 'Muli', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-  background-color: rgb(9, 17, 44);
+	font-family: "Muli", sans-serif;
+	padding: 0;
+	margin: 0;
+  
+	background-color: aliceblue;
 }
 
-h1 {
-  color: #fff;
-  position: absolute;
-  top: 0;
-  line-height: 100px;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
-}
+/*Global */
 
 .container {
-  display: flex;
+	display: flex;
   width: 90vw;
-
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  overflow: hidden;
 }
 
-.panel {
-  background-size: cover;
-  background-position-x: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 30px;
-  color:#fff;
-  cursor: pointer;
-  flex: 0.1;
-  margin: 10px;
-  position: relative;
-  transition: flex 0.7s ease-in;
+ul {
+  margin:0;
+  padding:0;
+  float: right;
+} 
+
+header {
+  background:rgb(46, 166, 170);
+  color:black;
+  padding-top: 20px;
+  height: 10vh;
+  min-height: 70px;
+  border-bottom: green 3px solid;
+}
+
+header a {
+  color: white;
+  text-decoration:none;
+  text-transform: capitalize;
+  font-size: 16px;
   
 }
 
-.panel h3 {
-  font-size: 24px;
-  position: absolute;
-  bottom: 20px;
-  left: 8px;
+header li {
+  float:left;
+  display: inline;
+  padding: 0 20px 0 20px;
+  
+}
+
+header #branding {
+  float: left;
+}
+
+header nav {
+  float: right;
+  
+}
+
+.hero-image {
+  background: linear-gradient(#58505024, #00000057), url(https://media.worldnomads.com/Travel-Safety/Canada/canadatravelalert-oversnap.jpg);
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUIE0ppXhYi7G16YQsXorXLoR7RH7dK_QhnA&usqp=CAU'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  min-height:400px;
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+}
+
+.hero-text {
+  color: #fff;
+  text-align: left;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: rgb(170, 170, 206);
+  
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
   margin: 0;
-  opacity: 0;
+}
+
+h1 {
+  height: 40px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+	color: rgb(24, 23, 23);
+	text-align: center;
+
+}
+.panel {
+	background-size: cover;
+	background-position-x: center;
+	background-repeat: no-repeat;
+	height: 80vh;
+	border-radius: 30px;
+	color: #fff;
+	cursor: pointer;
+	flex: 0.1;
+	margin: 10px;
+	position: relative;
+	transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+	font-size: 24px;
+	position: absolute;
+	bottom: 20px;
+	left: 8px;
+	margin: 0;
+	opacity: 0;
 }
 
 .panel.active {
-  flex: 0.8;
+	flex: 0.8;
 }
 
 .panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.7s;
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.7s;
 }
 
 @media screen and (min-width: 480px) {
-  .container {
-    width: 100vw;
-    
-  }
-  .panel:nth-of-type(14), 
-  .panel:nth-of-type(13),
-  .panel:nth-of-type(12), 
-  {
-    display: none;
-  }
+	.container {
+		width: 100vw;
+	}
+	.panel:nth-of-type(14),
+	.panel:nth-of-type(13),
+	.panel:nth-of-type(12) {
+		display: none;
+	}
 }
-
